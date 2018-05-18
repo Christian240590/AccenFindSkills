@@ -13,7 +13,7 @@ class MainActivity2: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main2)
 
         listView = findViewById<ListView>(R.id.listView)
         adapter = UserListAdapter(this, generateData())
@@ -27,7 +27,7 @@ class MainActivity2: AppCompatActivity() {
         var result = ArrayList<UserDto>()
 
 
-            var user: UserDto = UserDto("Alejandro Miranda Suarez", "23 Year Old, Analist")
+        var user: UserDto = UserDto("Alejandro Miranda Suarez", "23 Year Old, Analist")
             result.add(user)
 
         var user1: UserDto = UserDto("Luis Sandoval Ortega", "28 Year Old, Trainee")

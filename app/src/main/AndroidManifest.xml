@@ -33,6 +33,7 @@
         <activity android:name=".SinglePActivity" />
         <activity android:name=".personaListActivity" />
         <activity android:name=".personaDetailActivity" />
+        <activity android:name=".MainActivity2"/>
 
     </application>
 

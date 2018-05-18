@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                     .setAction("Action", null).show()
         }
         btn2.setOnClickListener{ view ->
-            val i = Intent(this, personaListActivity::class.java)
+            val i = Intent(this, MainActivity2::class.java)
             startActivity(i)
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
