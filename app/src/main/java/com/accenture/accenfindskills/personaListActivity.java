@@ -43,9 +43,9 @@ public class personaListActivity extends AppCompatActivity {
             }
         });*/
 
-        if (findViewById(R.id.persona_detail_container) != null) {
+     /*   if (findViewById(R.id.persona_detail_container) != null) {
             mTwoPane = true;
-        }
+        }*/
 
         View recyclerView = findViewById(R.id.persona_list);
         assert recyclerView != null;
@@ -66,7 +66,10 @@ public class personaListActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DummyContent.DummyItem item = (DummyContent.DummyItem) view.getTag();
-                if (mTwoPane) {
+                Context context = view.getContext();
+                Intent intent = new Intent(context, personaDetailActivity.class);
+                context.startActivity(intent);
+              /*  if (mTwoPane) {
                     Bundle arguments = new Bundle();
                     arguments.putString(personaDetailFragment.ARG_ITEM_ID, item.id);
                     personaDetailFragment fragment = new personaDetailFragment();
@@ -80,7 +83,8 @@ public class personaListActivity extends AppCompatActivity {
                     intent.putExtra(personaDetailFragment.ARG_ITEM_ID, item.id);
 
                     context.startActivity(intent);
-                }
+                }*/
+
             }
         };
 

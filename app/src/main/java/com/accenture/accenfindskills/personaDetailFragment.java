@@ -38,10 +38,10 @@ public class personaDetailFragment extends Fragment {
             }*/
             Log.i("asdasd", "mItem: " + mItem);
             Activity activity = this.getActivity();
-            CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
+     /*       CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
-                appBarLayout.setTitle(mItem.nombre + " " + mItem.Apellido); /* eliminar */
-            }
+                appBarLayout.setTitle(mItem.nombre + " " + mItem.Apellido);
+            }*/
         }
     }
 
