@@ -1,15 +1,23 @@
 package com.accenture.accenfindskills
 
+import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.Snackbar
+import android.support.multidex.MultiDex
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import com.accenture.accenfindskills.R.id.btnLike
+import com.accenture.accenfindskills.rest.RestClient
+import com.google.gson.Gson
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
-class MainActivity : AppCompatActivity() {
+
+
+class MainActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,8 +29,16 @@ class MainActivity : AppCompatActivity() {
                     .setAction("Action", null).show()
         }
 
+        btnLike.setOnClickListener {view ->
+           // val gson = Gson()
+            val cli = RestClient()
+            cli.skills
+
+            Snackbar.make(view, "Se ha enviado la solicitud", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
+        }
         // Example of a call to a native method
-        sample_text.text = stringFromJNI()
+       // sample_text.text = stringFromJNI()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -36,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.item_change_to_list -> true
             else -> super.onOptionsItemSelected(item)
         }
     }
