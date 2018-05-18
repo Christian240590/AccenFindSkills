@@ -67,6 +67,7 @@ public class personaListActivity extends AppCompatActivity {
             public void onClick(View view) {
                 DummyContent.DummyItem item = (DummyContent.DummyItem) view.getTag();
                 Context context = view.getContext();
+                ///ghfhgfgn
                 Intent intent = new Intent(context, personaDetailActivity.class);
                 context.startActivity(intent);
               /*  if (mTwoPane) {
