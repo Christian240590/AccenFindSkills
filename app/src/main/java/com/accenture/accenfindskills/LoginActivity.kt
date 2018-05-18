@@ -28,7 +28,7 @@ import android.content.Intent
 import kotlinx.android.synthetic.main.activity_login.*
 
 /**
- * A login screen that offers login via email/password.
+ * Pagina princiapla
  */
 class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
     /**
